@@ -1,0 +1,10 @@
+img {
+    margin: 3px;
+    padding: 3px;
+    border: 2px solid #eeeeee;
+    max-width: 100%;
+}
+
+.image-wrapper {
+    text-align: center;
+}
