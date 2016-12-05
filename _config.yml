@@ -65,7 +65,7 @@ google_ad_slot           :
 author:
   name             : "Adam Straube"
   avatar           : "bio-photo.jpg"
-  bio              : "Slinging Code"
+  bio              : "Blog about Web Development, Technology"
   location         : "Melbourne Australia"
   email            :
   uri              :
@@ -80,7 +80,7 @@ author:
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         :
+  linkedin         : astraube
   pinterest        :
   soundcloud       :
   stackoverflow    :  "1616880/adamst85"
