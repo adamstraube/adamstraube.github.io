@@ -57,7 +57,7 @@ analytics:
     tracking_id          : "UA-76877261-2"
 
 # Google AdSense
-google_ad_client         :
+google_ad_client         : 
 google_ad_slot           :
 
 
