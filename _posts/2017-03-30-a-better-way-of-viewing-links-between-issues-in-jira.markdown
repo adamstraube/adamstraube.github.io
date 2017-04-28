@@ -11,13 +11,19 @@ Linking issues is a great way to keep things in order, until there are too many 
 
 One day whilst working an issue with a particularly large number of linked issues and tasks. I got frustrated and decided to build a visual tool that would allow me to take in what was happening quickly.
 
-Here is the result: a Chrome extension that will add an issue link visualisation on the right hand pane when in Atlassian Jira. Download it from Github here: [Jira Issue Link Visualiser](https://github.com/adamstraube/JiraIssueLinkVisualiser)
+Here is the result: a Chrome extension that will add an issue link visualisation on the right hand pane when in Atlassian Jira. 
 
+**UPDATE (28/07/2017): Jira Issue Link Visualiser is now available in the Chrome store [here](https://chrome.google.com/webstore/detail/jira-issue-link-visualise/blhhnohbefoaoibbacoodpdgcmdnbkaa)**
 
 # How to install
 
-PS. Requires the REST API to be enabled in JIRA to work!
-* Clone this repository to a directory on your computer
+**PS.** If below version 7.0 of JIRA, you need to check if the REST API is enabled to work!
+
+**From the Chrome store**
+[JIRA Issue Link Visualiser](https://chrome.google.com/webstore/detail/jira-issue-link-visualise/blhhnohbefoaoibbacoodpdgcmdnbkaa)
+
+**From Github**
+* Clone [this](https://github.com/adamstraube/JiraIssueLinkVisualiser) repository to a directory on your computer
 * In Chrome go to Settings>Extensions and enable "Developer Mode"
 * Click "Load unpacked extension..." and open the directory where you cloned this repository
 
@@ -60,5 +66,5 @@ The most handy function when handling large projects and issues with large amoun
  ![Fullscreen](/images/issue-vis/whole-visualiser-tonsof-links-fullscreen.png)
 
 
- [Here](https://github.com/adamstraube/JiraIssueLinkVisualiser) is the link to repository on Github again, let me know if there are any bugs or feature requests you have and have fun!
+ Here is the link to repository on [Github](https://github.com/adamstraube/JiraIssueLinkVisualiser) again and the [Chrome store](https://chrome.google.com/webstore/detail/jira-issue-link-visualise/blhhnohbefoaoibbacoodpdgcmdnbkaa),  let me know if there are any bugs or feature requests you have and have fun!
  
