@@ -1,10 +1,11 @@
 ---
-layout: single
+layout: post
 comments: true
-title: Unit Testing Some Legacy Javascript/JQuery - Part 1
+title: Unit testing some legacy JavaScript/jQuery - Part 1
 date: 2019-06-12 13:05 +1000
+tags: Unit-testing Frontend JavaScript
 ---
-As anyone who has done unit testing knows, implementing unit tests on legacy code is generally hard. I recently went through migrating a small JQuery script into a version control system, modularised it and implemented unit testing with the [Jest framework](https://jestjs.io) to verify it does what we expect it too. 
+As anyone who has done unit testing knows, implementing unit tests on legacy code is generally hard. I recently went through migrating a small jQuery script into a version control system, modularised it and implemented unit testing with the [Jest framework](https://jestjs.io) to verify it does what we expect it too. 
 
 Implementing tests on your code cannot be overstated. Most of the benefits seem to repay in the medium to long term but some immediate ones:
  - Reduced likelyhood of bugs by testing many code paths
@@ -28,7 +29,7 @@ $(document).ready(function() {
         
 ```
 
-The above code has a few obstacles for us in our quest. It is not versioned and is hard coded onto the page. Additionally the code is coupled via JQuery bindings to the page and the main logic is written into an anonymous function. 
+The above code has a few obstacles for us in our quest. It is not versioned and is hard coded onto the page. Additionally the code is coupled via jQuery bindings to the page and the main logic is written into an anonymous function. 
 
 ## Refactoring:
 

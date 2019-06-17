@@ -1,7 +1,8 @@
 ---
-#layout: single
+layout: post
 comments: true
-title: Build a Docker Stack with Ansible Container
+title: Build a Docker stack with Ansible Container
+tags: Docker Ansible Containerisation 
 ---
 
 A great way to test a prototype, app or configuration is by using it in a container. If you decide it does not work for whatever reason then you can simply delete the container without risk of altering your work environment. You may however want to take the next step and implement different environments (production and development for example). With this comes the supporting requirements such as a database server or a load balancer. 
