@@ -5,11 +5,11 @@ title: Unit testing some legacy JavaScript/jQuery - Part 1
 date: 2019-06-12 13:05 +1000
 tags: Unit-testing Frontend JavaScript
 ---
-As anyone who has done unit testing knows, implementing unit tests on legacy code is generally hard. I recently went through migrating a small jQuery script into a version control system, modularised it and implemented unit testing with the [Jest framework](https://jestjs.io) to verify it does what we expect it too. 
+As anyone who has done unit testing knows, implementing unit tests on legacy code is generally hard. Over the past 3 months I have been investigating how best to implement automated testing on a legacy codebase. With a view to get a good completed example for reference for the rest of the project, I chose a small javascript/jQuery application that would have a visible improvement with some simple unit tests. Along the way this application was modularised, moved into a version control system and implemented unit testing with the [Jest framework](https://jestjs.io) to verify it's expected functionality. 
 
-Implementing tests on your code cannot be overstated. Most of the benefits seem to repay in the medium to long term but some immediate ones:
- - Reduced likelyhood of bugs by testing many code paths
- - Reducing the risk of breaking older functions when implementing new features
+The importance of implementing tests on your code cannot be overstated. There are many benefits to doing this, some of the most prominent are:
+ - Reduces the likelyhood of bugs by testing many code paths and expected functionality
+ - Reduces the risk of breaking older functions when implementing new features
  - Allows for easier bug fixing as tests help document the code
 
 This first post prepares the ground work for implementing a test which we will tackle in the next post.
@@ -29,7 +29,9 @@ $(document).ready(function() {
         
 ```
 
-The above code has a few obstacles for us in our quest. It is not versioned and is hard coded onto the page. Additionally the code is coupled via jQuery bindings to the page and the main logic is written into an anonymous function. 
+The above code has a few obstacles for us in our quest. It is not versioned and is hard coded onto the page. This makes it impossible to track changes made, difficult to collaborate with others on and a high likelyhood of losing the application on accidental deletion. 
+
+Additionally the code is coupled via JQuery bindings to the page and the main logic is written into an anonymous function. The code is married to the page and its functionality which means we cannot reuse the code elsewhere and anonymous function's cannot be called externally which is a requirement if we want to test the code.
 
 ## Refactoring:
 
@@ -53,7 +55,7 @@ $(document).ready(function() {
 }); 
 ```
 
-A number of things have happened to the above code:
+Here is what I have done with the above code:
  - All page specific bindings have been moved out into its own area
  - The logic of the function has been taken out of the anonymous function and moved to `function linkBuilder()`
 
@@ -88,9 +90,9 @@ $(document).ready(function() {
 }); 
 ```
 
-The import statement added allows us to pull in the function we want from the module we have created.
+The import statement above allows the function to be pulled in from the module we have created. We now have a module with which to perform testing against.
 
 ## Next step
 
-In the next post we will implement a unit test using the Jest testing framework. This will allow
+In the next post we will continue with implementing a unit test against this module using the Jest testing framework.
 
