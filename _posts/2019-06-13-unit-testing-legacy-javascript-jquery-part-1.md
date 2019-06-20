@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Unit testing some legacy JavaScript/jQuery - Part 1
+title: Unit testing legacy JavaScript/jQuery - Part 1
 date: 2019-06-12 13:05 +1000
 tags: Unit-testing Frontend JavaScript
 ---
@@ -65,14 +65,10 @@ Now we can create a new JS file that will serve as our module. This can be then 
 
 
 ```javascript
-function linkBuilder(link) {
-  var rewrite_link = "https://rewriteprefix.com/login?qurl="+link;
-  return rewrite_link;
-};
-module.exports = linkBuilder;
+export function linkBuilder(link) {
+  return "https://rewriteprefix.com/login?qurl="+link;
+}
 ```
-
-The `module.exports` line declares that the `linkBuilder` function should be available when this file is imported.
 
 This leaves us with the following code back on our front end page.
 
