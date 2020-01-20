@@ -22,11 +22,25 @@ If you need to get up and running fast then I have created a bash script that ha
 - Retains cache when running multiple stages
 
 #### Commands to get you up and running:
-- Put the above bash script somewhere and ensure it is executable (`chmod +x rungit.sh`)
-- Change into your project/working directory in WSL (directory must be accessible to Windows, not only to the WSL container)
-- `rungit.sh up` Start gitlab-runner container
-- `rungit.sh runStages {stage(s)}` Run gitlab-runner a specified stage or group of stages in your .gitlab-ci.yml. Multiple stages should be comma separated without spaces eg. `rungit.sh runStages build,test`. Giving no stage will run the`test` stage by default.
-- `rungit.sh down` Stop the gitlab-runner container and remove
+Change into your project/working directory in WSL (directory must be accessible to Windows, not only to the WSL container)
+
+```shell
+> rungit.sh up
+```
+
+Start gitlab-runner container
+
+```shell
+> rungit.sh runStages {stage(s)}
+```
+
+Run gitlab-runner a specified stage or group of stages in your .gitlab-ci.yml. Multiple stages should be comma separated without spaces eg. `rungit.sh runStages build,test`. Giving no stage will run the`test` stage by default.
+
+```shell
+> rungit.sh down
+```
+
+Stop the gitlab-runner container and remove
 
 ### Overview and caveats:
 
