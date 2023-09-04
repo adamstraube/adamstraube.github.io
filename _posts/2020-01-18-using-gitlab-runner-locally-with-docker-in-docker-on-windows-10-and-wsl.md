@@ -46,7 +46,7 @@ Stop the gitlab-runner container and remove
 
 Running gitlab-runner locally means utilising the `exec` option. Looking into this I came across some issues:
 - Running locally means you can only run one stage at a time (eg. stage, test, build)
-- The `exec` functionality may be [deprecated/removed sometime in the future](https://gitlab.com/gitlab-org/gitlab-runner/issues/2710) but a [replacement function will likely be implmented before this happens](https://gitlab.com/gitlab-org/gitlab-runner/issues/2797)
+- The `exec` functionality may be [deprecated/removed sometime in the future](https://gitlab.com/gitlab-org/gitlab-runner/issues/2710) but a [replacement function will likely be implemented before this happens](https://gitlab.com/gitlab-org/gitlab-runner/issues/2797)
 - Running gitlab-runner directly in Windows [has path resolution issues](https://gitlab.com/gitlab-org/gitlab-runner/issues/3809)
 
 
